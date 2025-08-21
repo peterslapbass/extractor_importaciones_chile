@@ -9,7 +9,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import sys
 import numpy as np
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+base_directory = os.path.dirname(os.path.abspath(__file__))
+os.chdir(base_directory)
 
 # Función para cargar la descripción de datos
 def cargar_descripcion(file_path, sheet_name):
@@ -299,7 +300,7 @@ progress.pack(pady=10)
 
 # Parámetros de búsqueda
 years_range = range(2017, 2025)
-base_directory = os.chdir(os.path.dirname(os.path.abspath(__file__)))
+base_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Manejar el cierre de la ventana para terminar el proceso
 root.protocol("WM_DELETE_WINDOW", on_closing)
